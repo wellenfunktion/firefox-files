@@ -4,7 +4,7 @@ ROOT COLORS - Change them here.
 
 :root {
   --sfwindow: #19171a;
-  --sfsecondary: #212121;
+  --sfsecondary: #19161B;
   --toolbarbutton-border-radius: 5px !important;
   --toolbar-field-focus-border-color: transparent !important;
   --tab-border-radius: 0 !important;
@@ -431,7 +431,7 @@ If this looks weird, comment out the window buttons section.
   transition: none !important;       /* Disables any animation */
 }
 
-/* toolbar at the bottom */
+/* toolbox at the bottom */
 #navigator-toolbox {
   -moz-box-direction: reverse !important;
 }
