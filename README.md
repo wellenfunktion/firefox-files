@@ -1,0 +1,2 @@
+# Firefox userChrome & userContent files.
+
