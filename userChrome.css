@@ -1,0 +1,482 @@
+/*
+ROOT COLORS - Change them here.
+*/
+
+:root {
+  --sfwindow: #19171a;
+  --sfsecondary: #212121;
+  --toolbarbutton-border-radius: 5px !important;
+  --toolbar-field-focus-border-color: transparent !important;
+  --tab-border-radius: 0 !important;
+  --tab-block-margin: 0 !important;
+  --toolbar-bgcolor: var(--sfsecondary) !important;
+  --tabs-border-color: var(--sfsecondary) !important;
+  --lwt-sidebar-background-color: var(--sfwindow) !important;
+  --lwt-toolbar-field-focus: var(--sfsecondary) !important;
+  --lwt-background-color: var(--sfsecondary) !important;
+  --dynamic-toolbar-color: var(--sfsecondary) !important;
+  background-color: var(--sfsecondary) !important; /* Fallback */
+}
+
+/*default for menupopup*/
+menupopup,
+panel {
+  --panel-background: var(--sfwindow) !important;
+  --panel-border-color: rgba(255, 255, 255, 0.103) !important;
+  --panel-border-radius: 0.5rem !important;
+  --panel-shadow: none !important;
+  background: none !important;
+  margin-top: -1px !important;
+}
+
+menuitem {
+  &:where([_moz-menuactive]:not([disabled="true"])) {
+    background-color: #434145 !important;
+  }
+}
+
+menuseparator {
+  display: none !important;
+}
+
+/*default for panels*/
+panelview {
+  --arrowpanel-background: var(--sfsecondary) !important;
+  color: white !important;
+}
+
+/*default for html popups*/
+#ContentSelectDropdown .ContentSelectDropdown-item-0 {
+  font-size: 13px !important;
+  color: rgb(211, 211, 211) !important;
+}
+
+/*default for autoscroller*/
+#autoscroller {
+  height: 30px !important;
+  width: 30px !important;
+}
+
+/* Tabs `s  */
+.tabbrowser-tab[selected="true"] .tab-background {
+  background: #201e21 none !important;
+}
+
+#tabbrowser-tabs:not([movingtab])
+  > #tabbrowser-arrowscrollbox
+  > .tabbrowser-tab
+  > .tab-stack
+  > .tab-background[multiselected="true"],
+#tabbrowser-tabs:not([movingtab])
+  > #tabbrowser-arrowscrollbox
+  > .tabbrowser-tab
+  > .tab-stack
+  > .tab-background[selected="true"] {
+  background-image: none !important;
+  background-color: var(--toolbar-bgcolor) !important;
+}
+
+/* Inactive tabs color */
+#navigator-toolbox {
+  background-color: var(--sfwindow) !important;
+}
+
+/* Sidebar color  */
+#sidebar-box,
+.sidebar-placesTree {
+  background-color: var(--sfwindow) !important;
+}
+
+/*
+REMOVED ELEMENTS
+*/
+
+/* hide the site information box. */
+#pageActionButton,
+#identity-box {
+    display: none !important;
+}
+
+/* ensure the default identity icon is hidden */
+#identity-icon {
+    background: none !important;
+}
+
+
+#page-action-buttons {
+  display: none;
+}
+
+/* Tabs elements  */
+.tab-close-button {
+  /* make it transparent */
+  opacity: 0;
+  border-radius: 5px !important;
+}
+
+/* remove loading icon  */
+.tab-throbber {
+  display: none !important;
+}
+
+/* make tab close button instantly show up  */
+.tabbrowser-tab:not([pinned]):hover .tab-close-button {
+  opacity: 100 !important;
+}
+
+/* remove loading burst  */
+.tabbrowser-tab[image^="chrome:"] .tab-loading-burst {
+  display: none;
+}
+
+/* remove website icons in tabs  */
+.tabbrowser-tab .tab-icon-image {
+  display: none !important;
+}
+
+/* hide the default favicon for pinned tabs */
+.tabbrowser-tab[pinned] .tab-icon-image {
+    display: none !important;
+}
+
+.tab-icon-overlay {
+  display: none !important;
+}
+
+#nav-bar:not([tabs-hidden="true"]) {
+  box-shadow: none;
+}
+
+#tabbrowser-tabs[haspinnedtabs]:not([positionpinnedtabs])
+  > #tabbrowser-arrowscrollbox
+  > .tabbrowser-tab[first-visible-unpinned-tab] {
+  margin-inline-start: 0 !important;
+}
+
+.tab-background {
+  border-right: 0px solid rgba(0, 0, 0, 0) !important;
+  margin-left: -4px !important;
+}
+
+.tabbrowser-tab:is([visuallyselected="true"], [multiselected])
+  > .tab-stack
+  > .tab-background {
+  box-shadow: none !important;
+}
+
+.tabbrowser-tab[last-visible-tab="true"] {
+  padding-inline-end: 0 !important;
+}
+
+#tabs-newtab-button {
+  padding-left: 0 !important;
+}
+
+.tab-loading-burst {
+  display: none !important;
+}
+
+#tabbrowser-tabs:not([overflow="true"]) ~ #alltabs-button {
+  display: none !important;
+}
+
+.titlebar-spacer {
+  display: none;
+}
+
+/* Disable elements  */
+#image.autoplay-media-icon,
+#context_bookmarkTab,
+#context_moveTabOptions,
+#context_sendTabToDevice,
+#context_reopenInContainer,
+#context_selectAllTabs,
+#context_closeTabOptions {
+  display: none !important;
+}
+
+/* Url Bar  */
+
+.urlbarView-favicon,
+.urlbarView-type-icon {
+  display: none;
+}
+
+
+#urlbar-input::selection {
+  background-color: #455074 !important;
+}
+
+#blocked-permissions-container {
+  display: none !important;
+}
+
+.notification-anchor-icon {
+  display: none !important;
+}
+
+.blocked-permission-icon {
+  display: none !important;
+}
+
+.urlbarView-row[selected] .urlbarView-row-inner,
+.urlbarView-row:hover .urlbarView-row-inner {
+  background-color: #312d31 !important;
+}
+
+#urlbar[breakout][breakout-extend][open] > #urlbar-input-container {
+  border-radius: var(--toolbarbutton-border-radius)
+    var(--toolbarbutton-border-radius) 0 0 !important;
+  background-color: #201e21 !important;
+}
+
+/* Urlbar View customizations */
+#urlbar-background,
+.urlbarView-results[wrap] > .urlbarView-row,
+.search-one-offs {
+  background-color: #201e21 !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+.urlbarView-row:hover > .urlbarView-row-inner {
+  background-color: #19171a !important;
+}
+
+#urlbar-input-container {
+  background-color: var(--sfsecondary) !important;
+  border: 1px solid rgba(0, 0, 0, 0) !important;
+}
+
+#urlbar-container {
+  border: none !important;
+  margin-left: 20 !important;
+  padding-left: 20 !important;
+}
+
+#urlbar {
+    padding-left: 20 !important;  /* Same value or tweak as needed */
+}
+
+#urlbar[focused="true"] > #urlbar-background {
+  box-shadow: none !important;
+}
+
+#navigator-toolbox {
+  border: none !important;
+}
+
+#reload-button:not([displaystop])
+  > .toolbarbutton-animatable-box
+  > .toolbarbutton-animatable-image {
+  animation-duration: 0ms !important;
+}
+
+/* removes the firefox suggest text from urlbarview */
+.urlbarView-row[label="Firefox Suggest"]::before {
+  display: none !important;
+}
+.urlbarView-row[label="Firefox Suggest"] {
+  margin-top: 0 !important;
+}
+
+/* Removes search engine support */
+#urlbar .search-one-offs {
+  display: none !important;
+}
+
+/* Removes the switch tab buttons in urlbarview */
+.urlbarView-row:is([type="switchtab"], [type="remotetab"])
+  > .urlbarView-row-inner
+  > .urlbarView-no-wrap
+  > .urlbarView-action {
+  display: none !important;
+}
+
+/* Bookmarks bar  */
+.bookmark-item .toolbarbutton-icon {
+  display: none;
+}
+
+#PlacesToolbar,
+#PlacesToolbarItems {
+  padding-bottom: 1px;
+}
+
+toolbarbutton.bookmark-item:not(.subviewbutton) {
+  min-width: 1.6em;
+}
+
+/* Toolbar  */
+#tracking-protection-icon-container,
+#urlbar-zoom-button,
+#star-button-box,
+#pageActionButton,
+#pageActionSeparator,
+#tabs-newtab-button,
+#PanelUI-button,
+.tab-secondary-label {
+  display: none !important;
+}
+
+.urlbarView-url {
+  color: #dedede !important;
+}
+
+/*
+
+ICONS
+
+Icons from Feather Icons
+https://feathericons.com/
+
+Only tested on windows, may lack support on MacOS/Linux.
+If this looks weird, comment out the window buttons section.
+*/
+
+/* browser-aero.css | chrome://browser/skin/browser-aero.css */
+/* toolbarbutton-icons.css | chrome://browser/skin/toolbarbutton-icons.css */
+
+#reload-button {
+  /* list-style-image: url("chrome://global/skin/icons/reload.svg"); */
+  /* list-style-image: url(")"); */
+  list-style-image: url(./refresh-ccw.svg) !important;
+  fill: white !important;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg)
+    brightness(104%) contrast(102%);
+}
+
+/* identity-block.css | chrome://browser/skin/identity-block/identity-block.css */
+#identity-box[pageproxystate="valid"].verifiedDomain #identity-icon,
+#identity-box[pageproxystate="valid"].mixedActiveBlocked #identity-icon {
+  /* list-style-image: url(chrome://global/skin/icons/security.svg); */
+  list-style-image: url(./lock.svg) !important;
+  fill: white !important;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg)
+    brightness(104%) contrast(102%);
+}
+
+/* tabs.css | chrome://browser/skin/tabs.css */
+#tabs-newtab-button,
+#TabsToolbar #new-tab-button {
+  /* list-style-image: url(chrome://global/skin/icons/plus.svg); */
+  list-style-image: url(./plus.svg) !important;
+  fill: white !important;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg)
+    brightness(104%) contrast(102%);
+}
+
+#alltabs-button {
+  /* list-style-image: url(chrome://global/skin/icons/arrow-down.svg); */
+  list-style-image: url(./chevron-down.svg) !important;
+  fill: white !important;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg)
+    brightness(104%) contrast(102%);
+}
+
+#permissions-granted-icon {
+  list-style-image: url(./hexagon.svg) !important;
+  fill: white !important;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(190deg)
+    brightness(104%) contrast(102%) !important;
+}
+
+/* custom pinned tabs icon */
+
+/* apply custom favicon for pinned tabs */
+.tabbrowser-tab[pinned] {
+    background-image: url("dot.svg") !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 16px 16px;
+}
+
+/* ensure the custom favicon remains visible when the tab is selected */
+.tabbrowser-tab[pinned]:hover,
+.tabbrowser-tab[pinned]:active,
+.tabbrowser-tab[pinned]:focus,
+.tabbrowser-tab[pinned]:selected {
+    background-image: url("dot-selected.svg") !important;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 16px 16px;
+}
+
+.tabbrowser-tab[selected="true"][pinned] .tab-background {
+    background-image: url("dot-selected.svg") !important;
+    background-repeat: no-repeat !important;
+    background-position: center center !important;
+    background-size: 16px 16px !important;
+}
+
+/* make sure background color of the selected tab does not interfere with the favicon */
+.tabbrowser-tab[pinned]:selected {
+    background-color: transparent !important;
+    border-color: transparent !important;
+}
+
+/* searchbar pop effect */
+
+/* remove focus effect on the search bar */
+#urlbar[focused="true"] {
+  background-color: unset !important; /* Keeps background unchanged */
+  box-shadow: none !important;       /* Removes glow/shadow effect */
+  border: none !important;           /* Removes any border changes */
+  outline: none !important;          /* Removes the focus outline */
+  transform: none !important;        /* Prevents size/position change */
+}
+
+/* keep search bar static during focus */
+#urlbar {
+  transition: none !important;       /* Disables any animation */
+}
+
+/* toolbar at the bottom */
+#navigator-toolbox {
+  -moz-box-direction: reverse !important;
+}
+
+#navigator-toolbox > #toolbar-menubar,
+#navigator-toolbox > #TabsToolbar,
+#navigator-toolbox > #PersonalToolbar,
+#navigator-toolbox > #bookmarksToolbar,
+#navigator-toolbox > #nav-bar {
+  order: 99 !important;
+}
+
+#main-window {
+  display: flex;
+  flex-direction: column;
+}
+
+#navigator-toolbox {
+  order: 1;
+}
+
+/* hide back and forward / minimize exit fullscreen buttons */
+
+/* remove minimize window button */
+.titlebar-min {      display: none;    }
+
+/* remove maximize window button */
+.titlebar-max {      display: none;    }
+.titlebar-restore {      display: none;    }
+
+/* remove close window button */
+.titlebar-close {      display: none;    }
+.titlebar-buttonbox-container {         display: none !important;     }
+.window-controls{      display: none;    }
+
+:root:not([customizing]) #back-button {
+  display: none !important;  }
+:root:not([customizing]) #forward-button {
+  display: none !important;  }
+
+/* change favicon for "about:" pages (Settings page) > optional */
+.tab-icon-image[src="chrome://browser/content/branding/favicon.svg"],
+.tab-icon-image[src="chrome://branding/content/icon32.png"] {
+    content: url("firefox.png") !important;
+}
+.tab-icon-image[src^="chrome://"] {
+    content: url("firefox.png") !important;
+}
