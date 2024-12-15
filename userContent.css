@@ -8,16 +8,6 @@
   }
 }
 
-/* ensure black background for new tabs and blank pages */
-@-moz-document url("about:newtab"),
-                  url("about:blank"),
-                  url-prefix("about:newtab") {
-    html, body {
-        background-color: #212121 !important;
-        color: #ffffff !important;
-    }
-}
-
 /* force background during tab-loading state */
 browser[tabloading] {
     background-color: #212121 !important;
