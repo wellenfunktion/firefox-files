@@ -1,5 +1,9 @@
 # Firefox userChrome & userContent files.
 
+![](4.png)
+
+![](5.png)
+
 ![](1.png)
 
 ![](2.png)
